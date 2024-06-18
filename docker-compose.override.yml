@@ -1,7 +1,7 @@
 services:
   netbox:
-    #ports:
-     # - "8000:8080"
+    ports:
+      - "8082:8080"
     volumes:
     - /home/gekkoadmin/netbox/configuration:/etc/netbox/config:z,ro
     - netbox-media-files:/opt/netbox/netbox/media:z,rw
