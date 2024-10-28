@@ -3,7 +3,7 @@ services:
     ports:
       - "8082:8080"
     volumes:
-    - /home/gekkoadmin/netbox/configuration:/etc/netbox/config:z,ro
+    - /home/gekkoadmin/netbox/configuration:/etc/netbox/config
     - netbox-media-files:/opt/netbox/netbox/media:z,rw
     - netbox-reports-files:/opt/netbox/netbox/reports:z,rw
     - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
@@ -11,13 +11,13 @@ services:
       retries: 15
   netbox-worker:
     volumes:
-    - /home/gekkoadmin/netbox/configuration:/etc/netbox/config:z,ro
+    - /home/gekkoadmin/netbox/configuration:/etc/netbox/config
     - netbox-media-files:/opt/netbox/netbox/media:z,rw
     - netbox-reports-files:/opt/netbox/netbox/reports:z,rw
     - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
   netbox-housekeeping:
     volumes:
-    - /home/gekkoadmin/netbox/configuration:/etc/netbox/config:z,ro
+    - /home/gekkoadmin/netbox/configuration:/etc/netbox/config
     - netbox-media-files:/opt/netbox/netbox/media:z,rw
     - netbox-reports-files:/opt/netbox/netbox/reports:z,rw
     - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
