@@ -81,6 +81,9 @@ services:
       - valkey-server --requirepass $$REDIS_PASSWORD ## $$ because of docker-compose
     healthcheck: *redis-healthcheck
     env_file: env/redis-cache.env
+    deploy:
+      restart_policy:
+        condition: none
     volumes:
       - netbox-redis-cache-data:/data
 
