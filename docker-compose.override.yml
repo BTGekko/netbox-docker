@@ -8,7 +8,7 @@ services:
     - netbox-reports-files:/opt/netbox/netbox/reports
     - netbox-scripts-files:/opt/netbox/netbox/scripts
     healthcheck:
-      retries: 30
+      retries: 3000
   netbox-worker:
     volumes:
     - /home/gekkoadmin/netbox/configuration:/etc/netbox/config:z,rw
